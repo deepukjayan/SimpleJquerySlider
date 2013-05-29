@@ -1,0 +1,59 @@
+
+	<head><style>
+		#slider { 
+		    position: absolute; 
+		    /*width: 468px; 
+		    height: 60px;*/
+		    width: auto;
+		    height: auto;
+		    /*overflow: hidden;*/
+		}
+		#slider img {
+
+		}
+		#slider > div { 
+		    position: absolute; 
+		    overflow: hidden;
+		}
+		.slideItem{
+			overflow: hidden;
+		}
+
+	</style>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+	<script>
+		$(function() {
+		
+			$("#slider > div:gt(0)").hide();
+	
+			setInterval(function() { 
+			  $('#slider > div:first')
+			    .fadeOut(1000)
+			    .next()
+			    .fadeIn(1000)
+			    .end()
+			    .appendTo('#slider');
+			},  3000);
+			
+		});
+	</script>
+</head>
+<body>
+
+	<div id="slider">
+	<div style="display: block;" class="slideItem">
+	     <a href="http://www.flickr.com/explore"> <img src="http://farm6.staticflickr.com/5443/8867205383_9e3d372bea.jpg"> </a>
+	   </div>
+	   <div style="display: none;" class="slideItem">
+	     <a href="http://www.flickr.com/explore"> <img src="http://farm8.staticflickr.com/7365/8869363221_2473607c1a.jpg"> </a>
+	   </div>
+	   <div style="display: block;" class="slideItem">
+	     <a href="http://www.flickr.com/explore"> <img src="http://farm6.staticflickr.com/5333/8867563133_74e00a850b.jpg"> </a>
+	   </div>
+	   <div style="display: block;" class="slideItem">
+	     All these images are from Flickr and sole property of of who ever uploaded it. Well this  shows this space can take text also :P !!!
+	   </div>
+	</div>
+	</div>
+</body>
